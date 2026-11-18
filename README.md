@@ -1,31 +1,32 @@
 # The World Today — 18 November 2026
 
-[![make.fun](https://img.shields.io/badge/make.fun-bounty-blue)](https://make.fun)
-[![Competition](https://img.shields.io/badge/make.fun-news--image--20261118-orange)](https://make.fun/c/news-image-20261118)
+A make.fun entry for **news-image-20261118**: "Sum up 18 November's world
+news in one image".
 
-A single square broadsheet front page summing up Wednesday 18 November 2026 in one image.
+## The image
 
-## What the image shows
+A newspaper front page, masthead **THE WORLD TODAY**, dated
+**Wednesday 18 November 2026**, with four panels for the day's biggest
+stories:
 
-Under the masthead **THE WORLD TODAY** and the date band **WEDNESDAY 18 NOVEMBER 2026**, six labelled panels cover the day's biggest stories:
+1. **Trump in Manila** — President Trump arrives in Manila for Quad talks
+   ahead of his China visit.
+2. **Ukraine hits Crimea Bridge** — Ukraine damages the Crimean bridge in a
+   major strike; Russia pounds Kyiv's bridges in return.
+3. **Iran drones hit US radar in Bahrain** — Iran attacks a US military
+   radar system in Bahrain with drones.
+4. **Cyclone Akvan bears down** — Cyclone Akvan intensifies over the Bay of
+   Bengal, a severe storm expected by 19 November.
 
-- **Lead — TRUMP IN MANILA FOR QUAD TALKS:** leaders around a summit table in Manila, with the flags of the US, India, Japan and Australia and the bay behind them.
-- **UKRAINE HITS CRIMEAN BRIDGE AGAIN:** a long bridge over a strait, smoke rising from a struck span.
-- **IRAN DRONES STRIKE US RADAR IN BAHRAIN:** drones above a desert radar base at dusk.
-- **CYCLONE AKVAN NEARS INDIA'S COAST:** a huge spiral cyclone over a map of India's coastline.
-- **CANADA & CHINA EXTEND TRADE DEALS:** two leaders shaking hands between Canadian and Chinese flags.
-- **US BANK & PAYMENT APPS GO DOWN:** a smartphone showing a bank-app error screen, bank towers behind it.
+Footer: MS Dhoni retires from the IPL; Canada and China extend trade deals
+ahead of the APEC summit.
 
-The style is a flat editorial newspaper illustration — clean bold shapes, a muted newsprint palette with one red accent, and text limited to the masthead, the date and the six labels so everything stays legible at small sizes.
+## How it runs
 
-## How the program works
-
-`main.ts` (Node 22, standard library only) copies the bundled `entry.png` byte-for-byte into the output directory — `MAKEFUN_OUTPUT_DIR` if set, otherwise `/output` — creating the directory if needed. It validates the PNG signature before copying, verifies the copied file's size matches the source, and exits non-zero with a clear message if the image is missing or invalid, so two runs always produce identical bytes.
-
-## Competition
-
-Entry for the make.fun competition [news-image-20261118](https://make.fun/c/news-image-20261118): "Sum up 18 November's world news in one image."
+`main.ts` (Node 22, standard library only) copies the pre-rendered
+`entry.png` to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `out/`). The image
+is a 1024×1024 PNG under 1 MiB, and both runs write byte-identical output.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see `LICENSE`.
